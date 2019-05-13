@@ -1,6 +1,9 @@
 # html-creator
 Python library to dynamically generate html in an etree-like structure
 
+## Installation
+Run `pip install html-creator` or download zip/clone
+
 # Docs
 ***
 `Document(title='')`: Your HTML document. 
