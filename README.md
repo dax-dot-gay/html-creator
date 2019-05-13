@@ -2,7 +2,7 @@
 Python library to dynamically generate html in an etree-like structure
 
 # Docs
-
+***
 `Document(title='')`: Your HTML document. 
 ## Args
 - title: The title of your document. This is optional and can be specified later
@@ -12,7 +12,7 @@ Python library to dynamically generate html in an etree-like structure
 - `Document.children`: The direct children of the document
 - `Document.head`: The head tag of the document (automatically generated)
 - `Document.body`: The body tag of the document (automatically generated)
-
+***
 `Element(tag='p',attrs={},content='')`: A single HTML element/tag
 ## Args
 - tag: The tag name, like div, p, or h1
@@ -26,7 +26,7 @@ Python library to dynamically generate html in an etree-like structure
 ## Properties
 - `tag`, `attrs`, `content`: See Args
 - `children`: The direct children on the Element
-
+***
 `CSS(Dict={})`: A utility class for generating CSS
 ## Args
 - Dict: Specifies a starting dictionary (Must be in form `{selector: {property: value,property: value,property: value}, selector2: {property: value,property: value,property: value}}`)
