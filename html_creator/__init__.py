@@ -11,9 +11,9 @@ class Element:
         attrstr = ''
         for a in list(self.attrs.keys()):
             if type(self.attrs[a]) == str:
-                attsstr += a + '="' + self.attrs[a] + '" '
+                attrstr += a + '="' + self.attrs[a] + '" '
             else:
-                attsstr += a + '=' + self.attrs[a] + ' '
+                attrstr += a + '=' + self.attrs[a] + ' '
         _str += '<'+self.tag+' '+attrstr+'>\n\t'+'\n\t'.join(self.content.splitlines())
         for c in self.children:
             _str += '\n\t'+str(c)
