@@ -7,13 +7,13 @@ Run `pip install html-creator` or download zip/clone
 ## Example
 ```py
 from html_creator import *
-doc = Document(title='Demo HTML Script')  # Title Of the page [ <title>]
-doc.body.append(Element(tag='h1')) # Having dictinary key as 0
-doc.body[0].append(Element(content='Demo Header with tag h1 ( hover the mouse to see magic ) ')) # Assigning the value to 1 
-doc.body.append(Element(tag = 'br')) # Key 1
-doc.body.append(Element(tag='div')) # Key 2
+doc = Document(title='Demo HTML Script')  # Title Of the page [ <title> ]
+doc.body.append(Element(tag='h1')) # Having List Index as 0
+doc.body[0].append(Element(content='Demo Header with tag h1 ( hover the mouse to see magic ) ')) # Assigning the value to 0
+doc.body.append(Element(tag = 'br')) # Index 1
+doc.body.append(Element(tag='div')) # Index 2
 doc.body[2].append(Element(content='This is the content added in div tag (font bold)'))
-doc.body.append(Element(tag = 'a')) # Key 3 
+doc.body.append(Element(tag = 'a')) # Index 3 
 doc.body[3].append(Element(content= "Example Paragraph ( turns blue )"))
 style = CSS()  # CSS() Class
 style.add_sel('h1') 
