@@ -3,6 +3,31 @@ Python library to dynamically generate html in an etree-like structure
 
 ## Installation
 Run `pip install html-creator` or download zip/clone
+***
+## Example
+```py
+from html_creator import *
+doc = Document(title='Demo HTML Script')  # Title Of the page [ <title>]
+doc.body.append(Element(tag='h1')) # Having dictinary key as 0
+doc.body[0].append(Element(content='Demo Header with tag h1 ( hover the mouse to see magic ) ')) # Assigning the value to 1 
+doc.body.append(Element(tag = 'br')) # Key 1
+doc.body.append(Element(tag='div')) # Key 2
+doc.body[2].append(Element(content='This is the content added in div tag (font bold)'))
+doc.body.append(Element(tag = 'a')) # Key 3 
+doc.body[3].append(Element(content= "Example Paragraph ( turns blue )"))
+style = CSS()  # CSS() Class
+style.add_sel('h1') 
+style.add_property('h1', 'text-transform',' uppercase')
+style.add_sel('h1:hover')
+style.add_property('h1:hover', 'font-size', '60px')
+style.add_sel('div')
+style.add_property('div', 'font-weight', 'bold')
+style.add_sel('a')
+style.add_property('a','color','blue')
+doc.head.append(Element(tag='style',content=str(style)))
+with open('test.html','w') as f:
+    print(str(doc),file=f)
+```
 
 # Docs
 ***
